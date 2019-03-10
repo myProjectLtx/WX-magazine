@@ -1,0 +1,6 @@
+<!-- 首页 -->
+<view class="container">
+    <image class="photo" src="/image/6.jpg"/>
+    <text class="name" decode="true" space="ensp">你  好</text>
+    <text class="welcome" bindtap="toNextPage" >欢迎来到我的杂志！</text>
+</view>

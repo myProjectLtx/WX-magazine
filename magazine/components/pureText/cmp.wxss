@@ -1,0 +1,14 @@
+/* components/pureText/cmp.wxss */
+.container{
+    padding: 0 20rpx;
+}
+.con-text{
+    font-size: 40rpx;
+    font-weight: 300;
+    margin-bottom: 20rpx;
+}
+.read-num{
+    font-size: 30rpx;
+    font-weight: 300;
+    color: #666;
+}

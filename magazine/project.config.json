@@ -1,0 +1,59 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.5.2",
+	"appid": "wxacd50b2128fd910b",
+	"projectname": "%E7%AC%AC%E4%B8%80%E4%B8%AAES5%EF%BC%88%E6%94%B9%E8%BF%87%E4%BF%9D%E7%95%99%E7%89%88%EF%BC%89",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "读书标签",
+					"pathName": "pages/type/type",
+					"query": "typeId=3",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "音乐标签",
+					"pathName": "pages/articleDetail/articleDetail",
+					"query": "id=11",
+					"scene": null
+				}
+			]
+		}
+	}
+}

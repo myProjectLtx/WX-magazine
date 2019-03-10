@@ -1,0 +1,6 @@
+<wxs src="../../utils/filter.wxs" module="filter"></wxs>
+
+<view class="container" >
+    <text decode="{{true}}" class="con-text">{{filter(conText)}}</text>
+    <view class="read-num">阅读 {{readNum}} </view>
+</view>

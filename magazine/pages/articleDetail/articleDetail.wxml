@@ -1,0 +1,61 @@
+<!-- 三级页面 -->
+<wxs src="../../utils/filter.wxs" module="filter"></wxs>
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="container">
+    <view class="title-container">
+        <text >{{articleDetail.title}}</text>
+    </view>
+    <view class="authorAndDate">
+        <text>{{articleDetail.author}}</text>
+        <text>{{articleDetail.publishTime}}</text>
+    </view>
+    <view class="media-container">
+        <swiper wx:if="{{articleDetail.banner[0]}}" indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" class="banner">
+        <swiper-item wx:for="{{articleDetail.banner}}" wx:key="item" >
+            <image src="{{item}}" />
+        </swiper-item>
+        </swiper>
+
+        <video wx:elif="{{articleDetail.video.src}}" class="video" id="myVideo"
+        src="{{articleDetail.video.src}}"
+        initial-time="10"
+        duration="30"
+        danmu-list="{{dunmuList}}"
+        enable-danmu="true"
+        danmu-btn="true"
+        >
+            <cover-view class="controls" wx:if="{{videoCoverHidden}}">
+                <cover-image src="{{articleDetail.video.poster}}"></cover-image>
+                <cover-view class="controls-box" bind:tap="onVideoTap">
+                    <cover-image src='../../image/icon/play.jpg'></cover-image>
+                    <cover-view >{{articleDetail.video.duration}}</cover-view>
+                </cover-view>
+            </cover-view>
+        </video>
+
+        <view wx:elif="{{articleDetail.audio.src}}" class="audio-container">
+            <view class="audio-controler">
+                <image bind:tap="onAudioPlayTap" wx:if="{{playing}}" src="../../image/icon/pause.jpg" />
+                <image bind:tap="onAudioPlayTap" wx:else src="../../image/icon/play.jpg" />
+            </view>
+            <view class="audio-info">
+                <view class="audio-title">
+                    <text >{{articleDetail.audio.audioTitle}}</text>
+                </view>
+                <view class="audio-from">
+                    <text >{{articleDetail.audio.from}}</text>
+                </view>
+                <view class="audio-progress">
+                    <progress  percent="{{progressPercent}}" style="{{progressWidth + 'rpx'}}" stroke-width="2"/>
+                    <view bind:touchstart="onAudioCircleStart"  bind:touchmove="onAudioCircleMove" class="progress-circle" style="left:{{progressCircleLeft + 'rpx'}}"></view>
+                </view>
+                <view class="audio-time">
+                    <text >{{format(audioCurTime)}}</text>
+                    <text >{{format(articleDetail.audio.duration)}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <d-pureText  con-text="{{articleDetail.content}}" read-num="{{articleDetail.readNum}}"/>
+</view>
+

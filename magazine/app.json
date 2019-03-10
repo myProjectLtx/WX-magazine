@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/type/type",
+    "pages/articleDetail/articleDetail"
+    
+  ]
+}

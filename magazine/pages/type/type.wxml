@@ -1,0 +1,18 @@
+<!-- 二级页面 -->
+<view class="container">
+    <view class="title-container">
+            <image  class="title-cover" src="{{newtitle.imgSrc}}" />
+        <view class="title-box">
+            <view class="title" >
+                <text >{{newtitle.title}}</text>
+                </view>
+            <view class="title-handle">
+                <image src="../../image/icon/more.png"></image>
+                <image src="../../image/icon/relay.png"></image>
+            </view>
+        </view>
+    </view>
+    
+    <!-- /////////////// -->
+    <d-content article-list="{{articleList}}"  catchdeta="onTap" catchmore="onMoreTap"/>  
+</view>

@@ -1,0 +1,17 @@
+<!-- 一级页面 -->
+<view class="container">
+    <view class="recommend-container">
+        <view class="recommend-article">
+            <view class="date">{{recommend.date}}</view>
+            <text class="recommend-title">{{recommend.title}}</text>
+            <image mode="widthFix" class="recommend-cover" src="{{recommend.imgSrc}}" />
+        </view>
+        <view class="recommend-box">
+            <text>+</text>
+            <text bindtap ="onArticleTypeTap" data-articleTypeId="{{item.typeId}}" wx:for="{{markType}}" wx:key="typeId">{{item.type}}</text>
+            <text>...</text>
+        </view>
+    </view>
+    <!-- /////////////// -->
+    <d-content  article-list="{{articleList}}" catchmore="onMoreTap" catchlike="onLikeTap" />
+</view>

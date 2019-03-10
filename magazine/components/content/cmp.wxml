@@ -1,0 +1,36 @@
+<view class="recommend-list-container">
+        <view class="per-article" wx:for="{{articleList}}" wx:key="id" >
+            <view class="article-head">
+                <image src="{{item.markPeopleAvatar}}" />
+                <text>{{item.markPeople}}</text>
+                <text>等</text>
+                <text>{{item.markCount}}</text>
+                <text>人马克了</text>
+            </view>
+            <view class="article-cover" >
+                <image mode="widthFix" src="{{item.articleImgSrc}}" catchtap="onTap" data-articleId="{{item.id}}"/>
+            </view>
+            <view class="article-title">
+                <text>{{item.articleTitle}}</text>
+            </view>
+            <view class="article-handle-box">
+                <view class="article-type">
+                    <text>{{item.articleType}}</text>
+                </view>
+                <view class="article-handle">
+                    <view>
+                        <image catchtap="onMoreTap" data-articleType="{{item.articleType}}" src="../../image/icon/more.png" />
+                    </view>
+                    <view>
+                        <button open-type="share">
+                            <image src="../../image/icon/relay.png" />
+                        </button>
+                    </view>
+                    <view>
+                        <image catchtap="onLikeTap" data-articleIndex="{{index}}" wx:if="{{listLike[index]}}" src="../../image/icon/circle_fill.png" />
+                        <image catchtap="onLikeTap" data-articleIndex="{{index}}" wx:else src="../../image/icon/circle.png" />
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
